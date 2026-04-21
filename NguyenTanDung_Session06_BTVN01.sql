@@ -12,17 +12,10 @@ create table bookings_2(
     `status`		varchar(255) not null,
     
     constraint fk_tx_city
-<<<<<<< HEAD
     foreign key (city_id) references cities(city_id),
     
     constraint chk_tx_price
     check (total_price > 0)
-=======
-    foreign key (city_id) references cities(city_id)
-
-	constraint chk_tx_price
-	check (total_price > 0)
->>>>>>> e3bc773b64cd5db3d90f558765c6739e59d87d04
 ); 
 
 insert into cities (city_id, city_name) 
