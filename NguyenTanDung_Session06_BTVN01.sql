@@ -13,6 +13,9 @@ create table bookings_2(
     
     constraint fk_tx_city
     foreign key (city_id) references cities(city_id)
+
+	constraint chk_tx_price
+	check (total_price > 0)
 ); 
 
 insert into cities (city_id, city_name) 
